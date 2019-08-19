@@ -1,0 +1,215 @@
+/**************************************************************
+  Design:              Structured Dynamics LLC Master Layout CSS
+  Author:              M.K. Bergman (mike@mkbergman.com)
+  Last Modified:       September 12, 2014  
+                   ---------------------------------
+  Thanks (in part) to: Pat Heard's LazyDays' design { http://fullahead.org }
+                       3-col tutorial ( http://builder.com.com/5100-6371-5268973.html )
+                      
+ **************************************************************/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+/*  font: 400 0.8em verdana, arial, sans-serif; */
+	font-size: 0.9em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 120%; 
+  background: #ffffff url(../images/bg/header_bottom_bar.png) repeat-x top left;
+  color: #393939;
+}
+
+h1 {   
+  clear: both;
+  font: 600 1.9em "trebuchet ms", serif;
+  color: #696969;
+	padding: 40px 0 10px 20px;
+}
+
+h2 {
+  font: 400 1.5em "trebuchet ms", serif;
+  color: #393939;
+}
+
+h3 {
+  font: 500 1.3em "trebuchet ms", serif;
+  color: #699529;
+}
+
+h4 {
+  font: 600 1.2em "trebuchet ms", serif;
+  color: #a00022;
+}
+
+h5 {
+  font: 600 1.1em "trebuchet ms", serif;
+  color: #699529;
+}
+
+h6 {
+  font: 600 1em "trebuchet ms", serif;
+  color: #a00022;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+p, dl {
+  margin: 0;
+  padding: 3px 5px 9px 5px;
+}
+
+a {
+  color: #322482;
+}
+
+a:hover {
+  color: #f18b1b;
+}
+
+b {
+  color: #393939;
+}
+
+ol, ul {
+  margin: 10px 30px;
+  padding: 0 30px;
+}
+
+ul {
+  list-style: square;
+}
+
+del {
+  color: #AAA;
+}
+
+code {
+  margin: 10px 15px;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  font: 400 1em courier, monospace;
+  line-height: 120%;
+  white-space: pre;
+  border: 1px #393939 dotted;
+  background: #e0e0e0;
+}
+
+pre {
+  font: 400 1em courier, monospace;
+}
+
+
+acronym {
+  cursor: help;
+  border-bottom: 1px solid #777;
+}
+
+dt {
+  font-weight: bold;
+  color: #FFB323;
+}
+
+dd {
+  margin-left: 0;
+  padding-left: 45px; 
+}
+
+h2.row_heading {
+  margin-top: 30px;
+  font-size: 1.7em;
+  color: #333333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.row_text  {
+  margin-bottom: 12px;
+  font-size: 1.4em;
+  color: #707070;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.row_text_med  {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #707070;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/**************************************************************
+   Form Elements
+ **************************************************************/
+
+label {
+  display: block;
+}
+
+textarea, select {
+  padding: 2px;
+  color: #393939;
+  border: 1px solid #c1b899;
+}
+
+input {
+  padding: 3px;
+  color: #393939;
+  background: #ffffff;
+  border: 1px solid #c1b899;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover {
+  color: #393939;
+  background: #ffdca5;
+  border: 1px solid #ffa500;
+}
+
+input.button {
+  padding: 4px;
+  color: #393939;
+  background: #b1d87a;
+	font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fbfbfb #393939 #393939 #fbfbfb;
+}
+
+input.button:hover {
+  padding: 4px;
+  color: #393939;
+  background: #ffdca5;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fbfbfb #393939 #393939 #fbfbfb;
+}
+
+/**************************************************************
+   Other Styles
+ **************************************************************/
+
+.boxGrayDotted {
+background-color:#eee;
+border:1px dotted #aaa;
+vertical-align:middle;
+margin:15px 60px;
+padding:8px;
+}

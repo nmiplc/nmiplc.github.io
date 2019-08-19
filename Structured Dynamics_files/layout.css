@@ -1,0 +1,372 @@
+/**************************************************************
+  Design:              Structured Dynamics LLC Master Layout CSS
+  Author:              M.K. Bergman (mike@mkbergman.com)
+  Last Modified:       September 12, 2014  
+                   ---------------------------------
+  Thanks (in part) to: Pat Heard's LazyDays' design { http://fullahead.org }
+                       3-col tutorial ( http://builder.com.com/5100-6371-5268973.html )
+                      
+ **************************************************************/
+
+/**************************************************************
+   #content: Sets the width (and possible footer display) of the 
+             site.  Make changes here to convert to a fixed
+             width site.
+ **************************************************************/
+
+#content {  
+  /* Uncomment this and possibly adjust 83% to force footer display at bottom of viewed page
+  height: 83%;
+  min-height: 83%; */
+  text-align: left;
+ }
+
+#content {
+/* non-scrolling version
+/* max-width hack for IE since it doesn't understand the valid css property
+  width: expression(document.body.clientWidth > 1080 ? "1080px" : "94%");    */
+  max-width: 1080px;
+  margin: 0 auto;
+/* scrolling version
+  position: fixed;
+  z-index: 150;	 */
+/*	width: 100%;
+	max-width: 1080px;
+  margin: 0px auto !important;
+/*  background: #ffffff; temp removed */	
+}
+
+
+/**************************************************************
+   #header: Holds the site title, logo, sign-in and maim menu items
+ **************************************************************/
+ 
+#header {
+  position: relative;
+/*  background: #211c21; */
+  height: 118px;
+  color: #ffffff;
+}
+
+/* Holds the site logo and title */
+
+#logo {
+  position: absolute;
+  z-index: 3;
+  top: 11px;
+  left: 120px;
+  border: none;
+  padding: 0px;
+  text-align: left;
+}
+
+/* Holds the mainMenu and related IDs 
+   The basic structure for the rounded corners came from:
+   http://www.webcredible.co.uk/user-friendly-resources/css/css-round-corners.shtml */
+   
+#mainMenu {
+  position: absolute;
+  right: 180px;
+  top:  85px;
+}
+
+/* Specific to IE */
+html #mainMenu {
+  top: 86px;
+}
+
+#mainMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mainMenu a, #mainMenu a span, #mainMenu li {
+  display: block;
+  float: left;
+}
+
+#mainMenu li {
+  margin: 0 20px;
+  font-weight: 600;
+  line-height: 200%;
+  text-decoration: none;
+  background: transparent;
+}
+
+#mainMenu a {
+/* added */
+    background: #211c21;
+/*   background: transparent url(../images/bg/round_none.png) left top no-repeat; */
+  text-decoration: none;
+  color: #ededed;
+  padding-left: 10px;
+}
+
+#mainMenu a span {
+  padding-right: 10px;
+  background: #211c21;
+}
+
+/* Specific to IE, but hides from IE5-Mac \*/
+#mainMenu a, #mainMenu a span {
+float: none
+}
+/* End hide */
+
+#mainMenu a:hover,
+#mainMenu a.here {
+  background: #211c21;
+  padding-left: 10px;
+}
+
+#mainMenu a.here span {
+  margin-top: 1px;  
+  color: #f18b1b;
+  background: #211c21;
+}
+
+#mainMenu a:hover span { 
+  margin-top: 1px;  
+  color: #7a8080;
+  padding-right: 10px;
+}
+
+#subMenu {
+  position: absolute;
+	top: 160px;
+	left: 40px;
+	z-index: 999;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	font-weight: bold;
+	line-height: 1.0;
+}
+
+#subMenu ul {
+  margin: 0 0 2px 0;
+}
+
+#subMenu li {
+  margin: 0 0 1px 0;
+  padding: 0;
+  list-style: none;
+}
+
+#subMenu a span {
+  background: #211c21;
+}
+
+#subMenu a {
+  background: #211c21;
+  text-decoration: none;
+  color: #f18b1b;
+	display: block;
+  margin: 0;
+  padding: 12px 12px;
+}
+
+#subMenu a:hover {
+  color: #7a8080;
+}
+
+#nav_block {
+  margin-bottom: 30px;
+}
+
+#nav_block a {
+  text-decoration: none;
+	color: #333333;
+}
+
+/**************************************************************
+   #page: Holds the main page content
+ **************************************************************/
+
+#page {
+/* non-scrolling version  */
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #ffffff;
+/* scrolling version
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #ffffff; -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;   */
+/* padding: 150px 0 150px 0; 
+  overflow: hidden;
+  z-index: 100;	   */
+}
+
+/**************************************************************
+   Panel and column classes
+ **************************************************************/
+
+.centerPanel {
+/* max-width hack for IE since it doesn't understand the valid css property;
+   adjust in relation to overall content width and left and right panels */
+  width: expression(document.body.clientWidth > 740 ? "740px" : "auto");
+  max-width: 740px;
+  margin:  4px 170px 0px 170px;
+  background: transparent;
+}
+
+/* This is a total hack due to an IE 6 bug, found from 
+( http://crowstoburnaby.com/index.php/2005/02/07/fixing_the_pc_ie_float_drop_bug ) */
+/* Specific to IE, but hides from IE5-mac \*/
+* html .centerPanel {
+    overflow-x: auto; overflow-y: hidden; 
+    width: expression(document.body.offsetWidth - 555);
+/* End hide from IE5-mac */    
+}
+
+/* These are MAJOR structural building blocks for the site !!! */
+
+.leftPanel {
+  float: left;
+  text-align: center;
+  width: 170px;
+  padding: 0 0 24px 0;
+}
+
+.rightPanel {
+  float: right;
+  text-align: center;
+  width: 170px;
+  padding: 0 0 24px 0;
+}
+
+/* infrequent variant, used mostly for the Home page */
+#BackgroundMidRightPanelHome {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #f3eee4;
+}
+
+/* infrequent variant, used mostly for the Home page */
+#BackgroundLeftPanelHome {
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  width: 100%;
+}
+
+/**************************************************************
+   center Panel header IDs
+ **************************************************************/
+
+#centerHeader {
+/*  margin: 3px 0 24px 3px;
+  float: left;
+  width: 50%;
+  text-align: left; */
+}
+
+/**************************************************************
+   Width classes used by the site columns
+ **************************************************************/
+
+/* this could be called width100, but it works to break row sections in the center panel */
+.centerPanelBreak {
+  float: left;
+  width: 97%;
+  height: 12px;
+  }
+	
+.centerPanelSeparator {
+  width: 100%;
+  border-top: 1px solid #D6DDB9;
+	margin: 45px 10px;
+}	
+
+.width100 {
+  width: 98%;
+  margin: 4px;
+}
+  
+/**************************************************************
+   Alignment classes
+ **************************************************************/
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+/**************************************************************
+   Generic display classes
+ **************************************************************/
+
+.clear {
+  clear: both;
+}
+
+/**************************************************************
+   Main row panels
+ **************************************************************/
+.main_row {
+  width: 100%;
+  border-top: 1px solid #D6DDB9;
+	margin-top: 90px;
+}
+
+.row_image {
+  width: 260px;
+}
+
+/**************************************************************
+   This section is devoted to the various central panel "displays", 
+   or what are often referred to as 'blurbs'
+ **************************************************************/
+.sectionHeader {
+  margin: 12px 4px;
+  width: 99%;
+  border-bottom: 1px #bbbbbb solid;
+}
+
+/**************************************************************
+   #footer: This section is separate from the content above.   
+ **************************************************************/
+
+#copyright {
+/*  border-top: 1px solid #D6DDB9; */
+  font-size: 0.7em;
+  padding: 10px 0 10px 0;
+  color: #797979;
+	margin-top: 120px;
+}
+
+#copyright a {
+  color: #393939;
+  text-decoration: none;
+}
+
+#copyright a:hover {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+.warning {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding:15px 10px 15px 70px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('../images/warning.png');
+}
